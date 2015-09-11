@@ -139,6 +139,16 @@ void ofxTween::start(){
 	}
 }
 
+void ofxTween::start(float progress){
+    if(!frameBased){
+        timestamp = Poco::Timestamp();
+        timestamp -= progress*1000;
+        timestamp += delay;
+    }else{
+        elapsed=progress;
+    }
+}
+
 void ofxTween::setDuration(int _duration) {
 	if(frameBased){
 		duration = _duration;

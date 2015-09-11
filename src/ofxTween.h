@@ -28,6 +28,7 @@ class ofxTween{
 
 		void addValue(float from, float to);
 		void start();
+		void start(float progress);
 
 		~ofxTween();
 
