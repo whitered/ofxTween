@@ -130,15 +130,6 @@ void ofxTween::addValue(float _from, float _to){
 	pTarget.push_back(_from);
 }
 
-void ofxTween::start(){
-	if(!frameBased){
-		timestamp = Poco::Timestamp();
-		timestamp += delay;
-	}else{
-		elapsed=0;
-	}
-}
-
 void ofxTween::start(float progress){
     if(!frameBased){
         timestamp = Poco::Timestamp();
